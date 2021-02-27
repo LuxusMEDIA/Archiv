@@ -14,5 +14,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start');
 });
+
+Route::get('/blog', function () {
+    return view('start');
+});
+
+Route::get('/archiv', function () {
+    return view('start');
+});
+
+Route::get('/ueber-uns', function () {
+    return view('start');
+});
+
+Route::get('/spenden', function () {
+    return view('start');
+});
+
+Route::get('/impressum', function () {
+    return view('start');
+});
+
+Route::get('/item/{id}', function () {
+    return view('item');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
